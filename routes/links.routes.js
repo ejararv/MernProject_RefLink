@@ -3,6 +3,7 @@ const router = Router()
 const Link = require('../models/Link')
 
 router.post('/generate', async (req, res) => {
+<<<<<<< HEAD
     try{
 
     } catch (e) {
@@ -30,6 +31,31 @@ router.get( '/:id', async (req, res) =>  {
     } catch (e) {
         res.status(500).json({message: 'Wystapil blad'})    
     }
+=======
+try{
+
+} catch (e) {
+res.status(500).json({message: 'Wystapil blad'})
+}
+}
+)
+
+router.get( '/', async (req, res) => {
+try{
+
+} catch (e) {
+res.status(500).json({message: 'Wystapil blad'})
+}
+}
+)
+
+router.get( '/:id', async (req, res) => {
+try{
+
+} catch (e) {
+res.status(500).json({message: 'Wystapil blad'})
+}
+>>>>>>> 1a0459cdbafd607540216797fc7c98dba4512213
 }
 )
 
