@@ -4,6 +4,14 @@ import React, {useContext, useEffect, useState} from 'react'
 
 
 export const AuthPage = () => {
+  const [form ,serForm] = useState ({
+    email: '' , password:''
+  })
+
+
+  // const changeHandler = event => {
+  //   setForm { ...form , [event.target.name]: event.target.value }
+  // }
   
 
   return (
@@ -22,6 +30,7 @@ export const AuthPage = () => {
                   type="text"
                   name="email"
                   className="yellow-input"
+                  
                 
                 />
                 <label htmlFor="email">Email</label>
