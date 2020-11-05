@@ -1,17 +1,17 @@
-
 import React, {useContext, useEffect, useState} from 'react'
 
 
 
 export const AuthPage = () => {
-  const [form ,serForm] = useState ({
+  const [form ,serForm] = useState ({    //useState Передаёт данные в виде массива где 1 значение это данные из формы а 2значение это функция для формы
     email: '' , password:''
   })
 
-
-  // const changeHandler = event => {
-  //   setForm { ...form , [event.target.name]: event.target.value }
-  // }
+//тутачки и есть сама функция для изменения формы, spread оператором вытягиваем текст из формы
+// присваивается значения к полям name в форме [event.target.name]: event.target.value 
+   const changeHandler = event => {
+     setForm ({ ...form , [event.target.name]: event.target.value })  
+   }
   
 
   return (
@@ -30,6 +30,7 @@ export const AuthPage = () => {
                   type="text"
                   name="email"
                   className="yellow-input"
+                  onClick={changeHandler}
                   
                 
                 />
@@ -43,6 +44,7 @@ export const AuthPage = () => {
                   type="password"
                   name="password"
                   className="yellow-input"
+                  onClick={changeHandler}
                   
                 />
                 <label htmlFor="email">Haslo</label>
