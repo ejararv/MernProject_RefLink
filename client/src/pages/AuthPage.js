@@ -49,8 +49,6 @@ export const AuthPage = () => {
       console.log('Data', data)
      }catch(e) {
 
-     }
-   }
   
   
 
