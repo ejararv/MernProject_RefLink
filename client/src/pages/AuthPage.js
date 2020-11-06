@@ -26,11 +26,11 @@ export const AuthPage = () => {
   return(
     <div>
         <div className="row">
-            <div class="col s7" style={{
+            <div className="col s7" style={{
                 backgroundImage: "url(" + "https://source.unsplash.com/random" + ")", backgroundPosition: 'center',
                 backgroundSize: 'cover', height: '100vh' }}>
             </div>
-            <div class="col s5" style={{}}>
+            <div className="col s5" style={{}}>
                 <h2>Zaloguj sie</h2>
                 <div className="card blue darken-1">
                     <div className="card-content white-text">
@@ -64,8 +64,8 @@ export const AuthPage = () => {
                         </div>
                     </div>
                     <div className="card-action">
-                        <a class="waves-effect waves-light btn">Zaloguj się</a>
-                        <a class="waves-effect waves-light btn">Rejestracja</a>
+                        <a className="waves-effect waves-light btn">Zaloguj się</a>
+                        <a className="waves-effect waves-light btn">Rejestracja</a>
                     </div>
                 </div>
             </div>
