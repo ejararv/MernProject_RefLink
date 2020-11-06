@@ -4,6 +4,9 @@ const nongoose = require("mongoose")
 
 const app = express()
 
+
+app.use(express.json({ extended: true }))  //парсит с клиента в формат джейсон
+
 app.use('/api/auth' , require('./routes/auth.routes'))
 app.use('/api/link', require('./routes/links.routes'))
 
