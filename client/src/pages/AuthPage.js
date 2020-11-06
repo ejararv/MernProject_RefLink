@@ -10,6 +10,13 @@ export const AuthPage = () => {
     email: '', password: ''
   })
 
+
+
+  useEffect( () =>{ 
+  }, [error])
+
+
+  
  //тутачки и есть сама функция для изменения формы, spread оператором вытягиваем текст из формы
 // присваивается значения к полям name в форме [event.target.name]: event.target.value 
   const changeHandler = event => {
@@ -65,7 +72,7 @@ export const AuthPage = () => {
                     </div>
                     <div className="card-action">
                         <a className="waves-effect waves-light btn">Zaloguj się</a>
-                        <a className="waves-effect waves-light btn">Rejestracja</a>
+                        <a className="waves-effect waves-light btn" onClick={registerHandler}>Rejestracja</a>
                     </div>
                 </div>
             </div>
