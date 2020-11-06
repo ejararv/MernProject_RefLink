@@ -6,46 +6,59 @@ export const AuthPage = () => {
     return (
         <div>
             <div className="row">
-                <div class="col s7" style={{
+                <div className="col need-hide" style={{
                     backgroundImage: "url(" + "https://source.unsplash.com/random" + ")", backgroundPosition: 'center',
-                    backgroundSize: 'cover', height: '100vh' }}>
+                    backgroundSize: 'cover', height: '100vh'
+                }}>
                 </div>
-                <div class="col s5" style={{}}>
-                    <h2>Zaloguj sie</h2>
-                    <div className="card blue darken-1">
-                        <div className="card-content white-text">
+                <div className="col" style={{ marginTop: '10vh' }}>
+                    <form style={{ margin: '5vh' }}>
+                        <h2 style={{ position: 'center' }}>Zaloguj sie</h2>
+                        <div className="card" class="border-0">
+                            <div className="card-content white-text">
 
-                            <div>
+                                <div>
 
-                                <div className="input-field">
-                                    <input
-                                        placeholder="Wpisz email"
-                                        id="email"
-                                        type="text"
-                                        name="email"
-                                        className="yellow-input"
-                                    />
-                                    <label htmlFor="email">Email</label>
+                                    <div className="input-field col s12">
+                                        <input
+                                            id="email"
+                                            type="text"
+                                            name="email"
+                                            className="yellow-input"
+                                        />
+                                        <label htmlFor="email">Email</label>
+                                    </div>
+
+                                    <div className="input-field col s12">
+                                        <input
+                                            id="password"
+                                            type="password"
+                                            name="password"
+                                            className="yellow-input"
+                                        />
+                                        <label htmlFor="email">Haslo</label>
+                                    </div>
+
                                 </div>
-
-                                <div className="input-field">
-                                    <input
-                                        placeholder="Wpisz haslo"
-                                        id="password"
-                                        type="password"
-                                        name="password"
-                                        className="yellow-input"
-                                    />
-                                    <label htmlFor="email">Haslo</label>
-                                </div>
-
+                                <p>
+                                    <label>
+                                        <input type="checkbox" />
+                                        <span>Zapamiętaj mnie</span>
+                                    </label>
+                                </p>
+                            </div>
+                            <div className="card-action">
+                                <button className="waves-effect teal lighten-2 btn"
+                                    style={{ width: '100%', marginTop: '10px' }}>
+                                    Zaloguj się
+                                    </button>
+                                <button className="waves-effect teal lighten-4 btn"
+                                    style={{ width: '100%', marginTop: '10px' }}>
+                                    Rejestracja
+                                    </button>
                             </div>
                         </div>
-                        <div className="card-action">
-                            <a class="waves-effect waves-light btn">Zaloguj się</a>
-                            <a class="waves-effect waves-light btn">Rejestracja</a>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
