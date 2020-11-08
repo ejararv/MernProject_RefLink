@@ -5,10 +5,31 @@ import {useHttp} from '../hooks/http.hook'
 export const AuthPage = () => {
   
   
-  const {loading, request, error, clearError} = useHttp()
-  const [form, setForm] = useState({
-    email: '', password: ''
-  })
+    const {loading, request, error, clearError} = useHttp()
+    const [form, setForm] = useState({
+      email: '', password: ''
+    })
+  
+  
+  
+    useEffect( () =>{ 
+    }, [error])
+  
+  
+    
+   //тутачки и есть сама функция для изменения формы, spread оператором вытягиваем текст из формы
+  // присваивается значения к полям name в форме [event.target.name]: event.target.value 
+    const changeHandler = event => {
+      setForm({ ...form, [event.target.name]: event.target.value })
+    }
+  
+    const registerHandler = async () => {
+      try {
+        const data = await request('/api/auth/register', 'POST', {...form})
+       // message(data.message)
+      } catch (e) {}
+    }
+  
 
     return (
         <div>
@@ -32,6 +53,7 @@ export const AuthPage = () => {
                                             type="text"
                                             name="email"
                                             className="yellow-input"
+                                            onChange={changeHandler}
                                         />
                                         <label htmlFor="email">Email</label>
                                     </div>
@@ -42,6 +64,7 @@ export const AuthPage = () => {
                                             type="password"
                                             name="password"
                                             className="yellow-input"
+                                            onChange={changeHandler}
                                         />
                                         <label htmlFor="email">Haslo</label>
                                     </div>
@@ -60,6 +83,7 @@ export const AuthPage = () => {
                                     Zaloguj się
                                     </button>
                                 <button className="waves-effect teal lighten-4 btn"
+                                onClick={registerHandler}
                                     style={{ width: '100%', marginTop: '10px' }}>
                                     Rejestracja
                                     </button>
@@ -71,3 +95,10 @@ export const AuthPage = () => {
         </div>
     )
 }
+
+
+
+
+ 
+
+
