@@ -1,10 +1,12 @@
 import React, {useContext, useEffect, useState} from 'react'
+import { useError } from '../hooks/error.hook'
 import {useHttp} from '../hooks/http.hook'
 
 
 export const AuthPage = () => {
   
-  
+    const message = useError()
+
     const {loading, request, error, clearError} = useHttp()
     const [form, setForm] = useState({
       email: '', password: ''
@@ -13,7 +15,12 @@ export const AuthPage = () => {
   
   
     useEffect( () =>{ 
-    }, [error])
+
+        console.log('Error', error)
+        message(error)
+        clearError()
+
+    }, [error, message, clearError])
   
   
     

@@ -1,11 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react'
 import registerHandler from '../pages/AuthPage'
 import {useHttp} from '../hooks/http.hook'
+import {useError} from '../hooks/error.hook'
 
 export const RegisrationPage = () => {
     
     
 
+    const message = useError()
     const {loading, request, error, clearError} = useHttp()
     const [form, setForm] = useState({
       email: '', password: '', user_name: '', last_name:''
@@ -16,7 +18,12 @@ export const RegisrationPage = () => {
 
       
     useEffect( () =>{ 
-    }, [error])
+
+        console.log('Error', error)
+        message(error)
+        clearError()
+
+    }, [error, message, clearError])
     
     
        //тутачки и есть сама функция для изменения формы, spread оператором вытягиваем текст из формы
