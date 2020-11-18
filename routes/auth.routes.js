@@ -1,11 +1,10 @@
-const {Router} = require ('express')
+const {Router} = require('express')
 const bcrypt = require('bcryptjs')
-const {check, validationResult} = require('express-validator')
-const User =require('../models/User')
-const router =Router()
-const jwt = require('jsonwebtoken')
 const config = require('config')
-
+const jwt = require('jsonwebtoken')
+const {check, validationResult} = require('express-validator')
+const User = require('../models/User')
+const router = Router()
 
 // /api/auth/register
 router.post(
@@ -38,7 +37,9 @@ router.post(
         }
 
         const hashePassword =await bcrypt.hash(password, 12)
-        const user = new User({ email, password: hashePassword,first_name,last_name})
+        const user = new User({ email, password: hashePassword
+            ,first_name,last_name
+        })
 
         await user.save()
 

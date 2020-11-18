@@ -34,7 +34,7 @@ export const useRoutes = isAuthenticated => {
             <Route path="/registration" exact>
                     <RegisrationPage />
                 </Route>
-            <Redirect to="/" />
+            <Redirect to="/registration" />
         </Switch>
     )
 }

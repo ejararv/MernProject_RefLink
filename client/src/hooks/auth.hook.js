@@ -2,7 +2,7 @@ import {useCallback, useState, useEffect} from 'react'
 
 const storageName = 'userData'
 
-export const useLogin = () => {
+export const useAuth = () => {
 
 const [token, setToken] = useState(null)
 const [userId, setUserId] = useState(null)
@@ -13,7 +13,7 @@ const login = useCallback((jwtToken, id)=> {
     setUserId(id)
 
     localStorage.setItem(storageName, JSON.stringify({
-        userId, token
+        userId: id, token: jwtToken
     })) //апи браузера
 
 
