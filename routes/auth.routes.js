@@ -12,46 +12,40 @@ router.post(
 [
     check('email', 'Niekorektny email').isEmail(),
     check('password', 'Minimum 6 znaków').isLength({min: 6}),
-    check('first_name', 'Wpisz imie').isLength({min: 1}),
-    check('last_name', 'Wpisz Nazwisko').isLength({min:1})
+   // check('first_name', 'Wpisz imie').isLength({min: 1}),
+   // check('last_name', 'Wpisz Nazwisko').isLength({min:1})
 ],
 
-    async (req, res) => {
-    try{
-
-        const erorrs = validationResult(req)
-
-        if (!erorrs.isEmpty()){
-            return res.status(400).json({
-                erorrs: erorrs.array(),
-                message: 'Blednie dane'
-            })
-        }
-
-
-        const {email, password, first_name, last_name} = req.body
-
-        const candidate = await User.findOne({email})
-        if (candidate){
-            res.status(400).json({message: 'Uzytkownik z takim email juz istneje'})
-        }
-
-        const hashePassword =await bcrypt.hash(password, 12)
-        const user = new User({ email, password: hashePassword
-            ,first_name,last_name
+async (req, res) => {
+    try {
+      const errors = validationResult(req)
+  
+      if (!errors.isEmpty()) {
+        return res.status(400).json({
+          errors: errors.array(),
+          message: 'Некорректный данные при регистрации'
         })
-
-        await user.save()
-
-        res.status(201).json({message: 'Uzytkownik jest dodany'})
-        
-
-
-
+      }
+  
+      const {email, password} = req.body
+  
+      const candidate = await User.findOne({ email })
+  
+      if (candidate) {
+        return res.status(400).json({ message: 'Такой пользователь уже существует' })
+      }
+  
+      const hashedPassword = await bcrypt.hash(password, 12)
+      const user = new User({ email, password: hashedPassword })
+  
+      await user.save()
+  
+      res.status(201).json({ message: 'Пользователь создан' })
+  
     } catch (e) {
-        res.status(500).json({message: 'Wystapil blad'})    
+      res.status(500).json({ message: 'Что-то пошло не так, попробуйте снова' })
     }
-})
+  })
 
 
 // /api/auth/login
