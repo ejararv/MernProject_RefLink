@@ -1,7 +1,6 @@
 {
     "port": 5000,
-
-    "jwtsecret": "Lizaveta Sobaleva i Uladzimir Rashatsko ",
-
-    "mongoUri": "mongodb+srv://ejararv:6077832Gt@cluster0.at8ax.mongodb.net/app?retryWrites=true&w=majority"
-}
+    "jwtSecret": "12345",
+    "mongoUri": "mongodb+srv://ejararv:6077832Gt@cluster0.at8ax.mongodb.net/app?retryWrites=true&w=majority",
+    "baseUrl": "http://localhost:5000"
+  }
