@@ -1,137 +1,108 @@
-import  {useContext, useEffect, useState} from 'react'
-import { useMessage } from '../hooks/message.hook'
+import React, {useContext, useEffect, useState} from 'react'
 import {useHttp} from '../hooks/http.hook'
+import {useMessage} from '../hooks/message.hook'
 import {AuthContext} from '../context/AuthContext'
 
 export const AuthPage = () => {
-  
+  const auth = useContext(AuthContext)
+  const message = useMessage()
+  const {loading, request, error, clearError} = useHttp()
+  const [form, setForm] = useState({
+    email: '', password: ''
+  })
 
-    const auth = useContext(AuthContext)
-    const message = useMessage()
+  useEffect(() => {
+    message(error)
+    clearError()
+  }, [error, message, clearError])
 
-    const {loading, request, error, clearError} = useHttp()
-    const [form, setForm] = useState({
-      email: '', password: ''
-    })
-  
-  
-  
-    useEffect( () =>{ 
+  useEffect(() => {
+    window.M.updateTextFields()
+  }, [])
 
-        console.log('Error', error)
-        message(error)
-        clearError()
 
-    }, [error, message, clearError])
-  
-  
-    
-   //тутачки и есть сама функция для изменения формы, spread оператором вытягиваем текст из формы
+  //тутачки и есть сама функция для изменения формы, spread оператором вытягиваем текст из формы
   // присваивается значения к полям name в форме [event.target.name]: event.target.value 
-    const changeHandler = event => {
-      setForm({ ...form, [event.target.name]: event.target.value })
-    }
-  
-    const registerHandler = async () => {
-        try {
-          const data = await request('/api/auth/register', 'POST', {...form})
-          message(data.message)
-        } catch (e) {}
-      }
+  const changeHandler = event => {
+    setForm({ ...form, [event.target.name]: event.target.value })
+  }
 
-    const loginHandler = async () => {
-        try {
-          const data = await request('/api/auth/login', 'POST', {...form})
-          auth.login(data.token, data.userId)
-        } catch (e) {}
-      }
-  
+  const registerHandler = async () => {
+    try {
+      const data = await request('/api/auth/register', 'POST', {...form})
+      message(data.message)
+    } catch (e) {}
+  }
 
-    return (
+  const loginHandler = async () => {
+    try {
+      const data = await request('/api/auth/login', 'POST', {...form})
+      auth.login(data.token, data.userId)
+    } catch (e) {}
+  }
 
+  return (
+    <div className="row">
+      <div className="col s6 offset-s3">
+        <h1>Skróć link</h1>
+        <div className="card blue darken-1">
+          <div className="card-content white-text">
+            <span className="card-title">Zaloguj sie</span>
+            <div>
 
-        <div className="row">
-        <div className="col s6 offset-s3">
-          <h1>Сократи Ссылку</h1>
-          <div className="card blue darken-1">
-            <div className="card-content white-text">
-              <span className="card-title">Авторизация</span>
-              <div>
-
-              {/* <div className="input-field">
-                                     <input 
-                                    id="first_name" 
-                                    type="text" 
-                                    name="first_name"
-                                    className="yellow-input" 
-                                    onChange={changeHandler}
-                                    />
-                                        <label htmlFor="first_name">First Name</label>
-                                    </div>
-
-                                     <div className="input-field">
-                                         <input 
-                                         id="last_name" 
-                                         type="text"
-                                         name="last_name" 
-                                         className="yellow-input" 
-                                         onChange={changeHandler}
-                                         />
-                                     <label htmlFor="last_name">Last Name</label>
-                                     </div> */}
-  
-                <div className="input-field">
-                  <input
-                    placeholder="Введите email"
-                    id="email"
-                    type="text"
-                    name="email"
-                    className="yellow-input"
-                    value={form.email}
-                    onChange={changeHandler}
-                  />
-                  <label htmlFor="email">Email</label>
-                </div>
-  
-                <div className="input-field">
-                  <input
-                    placeholder="Введите пароль"
-                    id="password"
-                    type="password"
-                    name="password"
-                    className="yellow-input"
-                    value={form.password}
-                    onChange={changeHandler}
-                  />
-                  <label htmlFor="email">Пароль</label>
-                </div>
-  
+              <div className="input-field">
+                <input
+                  placeholder="Wpisz email"
+                  id="email"
+                  type="text"
+                  name="email"
+                  className="yellow-input"
+                  value={form.email}
+                  onChange={changeHandler}
+                />
+                <label htmlFor="email">Email</label>
               </div>
+
+              <div className="input-field">
+                <input
+                  placeholder="Wpisz hasło"
+                  id="password"
+                  type="password"
+                  name="password"
+                  className="yellow-input"
+                  value={form.password}
+                  onChange={changeHandler}
+                />
+                <label htmlFor="email">Hasło</label>
+              </div>
+
             </div>
-            <div className="card-action">
-              <button
-                className="btn yellow darken-4"
-                style={{marginRight: 10}}
-                disabled={loading}
-                onClick={loginHandler}
-              >
-                Войти
-              </button>
-              <button
-                className="btn grey lighten-1 black-text"
-                onClick={registerHandler}
-                disabled={loading}
-              >
-                Регистрация
-              </button>
-            </div>
+          </div>
+          <div className="card-action">
+            <button
+              className="btn yellow darken-4"
+              style={{marginRight: 10}}
+              disabled={loading}
+              onClick={loginHandler}
+            >
+              Zaloguj sie
+            </button>
+            <button
+              className="btn grey lighten-1 black-text"
+              onClick={registerHandler}
+              disabled={loading}
+            >
+              Zarejestruj sie
+            </button>
           </div>
         </div>
       </div>
+    </div>
+  )
+}
 
 
-
-        // <div>
+ // <div>
         //     <div className="row">
         //         <div className="col need-hide" style={{
         //             backgroundImage: "url(" + "https://source.unsplash.com/random" + ")", backgroundPosition: 'center',
@@ -192,12 +163,13 @@ export const AuthPage = () => {
         //         </div>
         //     </div>
         // </div>
-    )
-}
+    
+    
 
 
 
 
- 
+
+
 
 
