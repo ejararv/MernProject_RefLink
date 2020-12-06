@@ -134,4 +134,4 @@ const isLocalhost = Boolean(
         registration.unregister();
       });
     }
-}
+  }

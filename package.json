@@ -1,12 +1,14 @@
 {
   "name": "projekt",
   "version": "1.0.0",
-  "description": "",
+  "description": "mern",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "cross-env NODE_ENV=production node app.js",
     "server": "nodemon app.js",
     "client": "npm run start --prefix client",
+    "client:install": "npm install --prefix client",
+    "client:build": "npm run build --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Lizaveta Sobaleva, Uladzimir Rashatsko",
@@ -17,10 +19,12 @@
     "express": "^4.17.1",
     "express-validator": "^6.6.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.11"
+    "mongoose": "^5.10.11",
+    "shortid": "^2.2.15"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
+    "cross-env": "^6.0.3",
     "nodemon": "^2.0.6"
   }
 }

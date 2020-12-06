@@ -4,14 +4,14 @@
   "private": true,
   "dependencies": {
     "@materializecss/materialize": "^1.0.0",
-    "@testing-library/jest-dom": "^5.11.5",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.1",
+    "@testing-library/user-event": "^12.2.2",
     "bootstrap": "^4.5.3",
     "es6": "0.0.7",
-    "materialize-css": "^1.0.0-rc.2",
+    "materialize-css": "^1.0.0",
     "node-sass": "^5.0.0",
-    "nouislider": "^14.6.2",
+    "nouislider": "^14.6.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-parallax": "^3.1.2",
@@ -26,10 +26,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": "react-app"
   },
   "proxy": "http://localhost:5000",
   "browserslist": {
