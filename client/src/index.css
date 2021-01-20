@@ -1,4 +1,3 @@
-@import "~materialize-css/dist/css/materialize.min.css";
 @import "~bootstrap/dist/css/bootstrap.css";
 
 
@@ -8,3 +7,10 @@
         display:none;
     }
  }
+ 
+ .full-img {
+    background-image: url("https://source.unsplash.com/random");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

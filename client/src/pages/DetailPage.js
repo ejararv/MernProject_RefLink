@@ -31,6 +31,8 @@ export const DetailPage = () => {
   return (
     <>
       { !loading && link && <LinkCard link={link} /> }
+
+      <a class="btn btn-primary" href="/links">Powrót do listy</a>
     </>
   )
 }

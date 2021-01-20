@@ -7,13 +7,13 @@ export const LinksList = ({ links }) => {
   }
 
   return (
-    <table>
+    <table class="table">
       <thead>
       <tr>
-        <th>№</th>
-        <th>Skąd</th>
-        <th>Skrócon</th>
-        <th>Otwórz</th>
+        <th>#</th>
+        <th>Oryginalny link</th>
+        <th>Twój link</th>
+        <th>Zobacz szczegóły</th>
       </tr>
       </thead>
 
@@ -21,7 +21,7 @@ export const LinksList = ({ links }) => {
       { links.map((link, index) => {
         return (
           <tr key={link._id}>
-            <td>{index + 1}</td>
+            <th>{index + 1}</th>
             <td>{link.from}</td>
             <td>{link.to}</td>
             <td>

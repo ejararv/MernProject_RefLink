@@ -3,12 +3,30 @@ import React from 'react'
 export const LinkCard = ({ link }) => {
   return (
     <>
-      <h2>Link</h2>
+      <h2>Szczegóły linku</h2>
 
-      <p>Twój link: <a href={link.to} target="_blank" rel="noopener noreferrer">{link.to}</a></p>
-      <p>Skąd: <a href={link.from} target="_blank" rel="noopener noreferrer">{link.from}</a></p>
-      <p>Liczba kliknięć w link: <strong>{link.clicks}</strong></p>
-      <p>Data utworzenia: <strong>{new Date(link.date).toLocaleDateString()}</strong></p>
+
+
+      <table class="table">
+        <tbody>
+          <tr>
+            <th>Twój link:</th>
+            <td><a href={link.to} target="_blank" rel="noopener noreferrer">{link.to}</a></td>
+          </tr>
+          <tr>
+            <th>Skąd:</th>
+            <td><a href={link.from} target="_blank" rel="noopener noreferrer">{link.from}</a></td>
+          </tr>
+          <tr>
+            <th>Liczba kliknięć w link:</th>
+            <td>{link.click}</td>
+          </tr>
+          <tr>
+            <th>Data utworzenia:</th>
+            <td>{new Date(link.date).toLocaleDateString()}</td>
+          </tr>
+        </tbody>
+      </table>
     </>
   )
 }
