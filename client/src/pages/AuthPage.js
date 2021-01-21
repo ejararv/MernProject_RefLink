@@ -44,46 +44,55 @@ export const AuthPage = () => {
   }
 
   return (
-    <div class="row" >
-      <div class="container">
-        <form>
-          <div class="form-group">
-            <h5 class="card-title">Zaloguj sie</h5>
-            <div>
-              <div class="form-group">
-                <label htmlFor="email">Email</label>
-                <input
-                  placeholder="Wpisz email"
-                  id="email"
-                  type="text"
-                  name="email"
-                  class="form-control"
-                  value={form.email}
-                  onChange={changeHandler} />
-              </div>
-              <div class="form-group">
-                <label htmlFor="email">Hasło</label>
-                <input
-                  placeholder="Wpisz hasło"
-                  id="password"
-                  type="password"
-                  name="password"
-                  class="form-control"
-                  value={form.password}
-                  onChange={changeHandler} />
-              </div>
+    <header class="login">
+      <div class="row">
+        <div class="col-6">
+        </div>
+        <div class="col-6">
+          <div class="fon">
+            <div class="container">
+              <form>
+                <div class="form-group">
+                  <h5 class="card-title">Zaloguj sie</h5>
+                  <div>
+                    <div class="form-group">
+                      <label htmlFor="email">Email</label>
+                      <input
+                        placeholder="Wpisz email"
+                        id="email"
+                        type="text"
+                        name="email"
+                        class="form-control"
+                        value={form.email}
+                        onChange={changeHandler} />
+                    </div>
+                    <div class="form-group">
+                      <label htmlFor="email">Hasło</label>
+                      <input
+                        placeholder="Wpisz hasło"
+                        id="password"
+                        type="password"
+                        name="password"
+                        class="form-control"
+                        value={form.password}
+                        onChange={changeHandler} />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <div>
+                  <a class="btn btn-primary" style={{ marginRight: 10 }} disabled={loading} onClick={loginHandler}>
+                    Zaloguj sie</a>
+                  <a class="nav-link" href="/registration">Nie masz konta? Zarejestruj sie</a>
+                </div>
+              </form>
             </div>
           </div>
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-          </div>
-          <div>
-            <a class="btn btn-primary" style={{ marginRight: 10 }} disabled={loading} onClick={loginHandler}>
-              Zaloguj sie</a>
-            <a class="nav-link" href="/registration">Nie masz konta? Zarejestruj sie</a>
-          </div>
-        </form>
+        </div>
       </div>
-    </div>
-  )}
+    </header>
+  )
+}

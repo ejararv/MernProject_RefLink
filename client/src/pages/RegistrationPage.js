@@ -48,65 +48,73 @@ export const RegisrationPage = () => {
 
 
   return (
-    <div className="row">
-      <div className="col s6 offset-s3">
-        <form>
-          <div class="form-group">
-            <h5 class="card-title">Zarejestruj sie</h5>
-            <div>
-              <div class="form-group">
-                <label htmlFor="first_name">Imię</label>
-                <input
-                  placeholder="Wpisz imię"
-                  id="first_name"
-                  type="text"
-                  name="first_name"
-                  class="form-control"
-                  onChange={changeHandler} />
-              </div>
+    <header class="login">
+      <div class="row">
+        <div class="col-6">
+        </div>
+        <div class="col-6">
+          <div class="reg">
+            <div class="container">
+              <form>
+                <div class="form-group">
+                  <h5 class="card-title">Zarejestruj sie</h5>
+                  <div>
+                    <div class="form-group">
+                      <label htmlFor="first_name">Imię</label>
+                      <input
+                        placeholder="Wpisz imię"
+                        id="first_name"
+                        type="text"
+                        name="first_name"
+                        class="form-control"
+                        onChange={changeHandler} />
+                    </div>
 
-              <div class="form-group">
-                <label htmlFor="last_name">Nazwisko</label>
-                <input
-                  placeholder="Wpisz nazwisko"
-                  id="last_name"
-                  type="text"
-                  name="last_name"
-                  class="form-control"
-                  onChange={changeHandler} />
-              </div>
+                    <div class="form-group">
+                      <label htmlFor="last_name">Nazwisko</label>
+                      <input
+                        placeholder="Wpisz nazwisko"
+                        id="last_name"
+                        type="text"
+                        name="last_name"
+                        class="form-control"
+                        onChange={changeHandler} />
+                    </div>
 
-              <div class="form-group">
-                <label htmlFor="email">Email</label>
-                <input
-                  placeholder="Wpisz email"
-                  id="email"
-                  type="text"
-                  name="email"
-                  class="form-control"
-                  value={form.email}
-                  onChange={changeHandler} />
-              </div>
+                    <div class="form-group">
+                      <label htmlFor="email">Email</label>
+                      <input
+                        placeholder="Wpisz email"
+                        id="email"
+                        type="text"
+                        name="email"
+                        class="form-control"
+                        value={form.email}
+                        onChange={changeHandler} />
+                    </div>
 
-              <div class="form-group">
-                <label htmlFor="email">Hasło</label>
-                <input
-                  placeholder="Wpisz hasło"
-                  id="password"
-                  type="password"
-                  name="password"
-                  class="form-control"
-                  value={form.password}
-                  onChange={changeHandler} />
-              </div>
+                    <div class="form-group">
+                      <label htmlFor="email">Hasło</label>
+                      <input
+                        placeholder="Wpisz hasło"
+                        id="password"
+                        type="password"
+                        name="password"
+                        class="form-control"
+                        value={form.password}
+                        onChange={changeHandler} />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <a class="btn btn-primary" onClick={registerHandler}>Zarejestruj sie</a>
+                  <a class="nav-link" href="/">Już mam konto</a>
+                </div>
+              </form>
             </div>
-          </div>
-          <div>
-            <a class="btn btn-primary" onClick={registerHandler}>Zarejestruj sie</a>
-            <a class="nav-link" href="/">Już mam konto</a>
-          </div>
-        </form>
+          </div >
+        </div>
       </div>
-    </div >
+    </header>
   )
 }

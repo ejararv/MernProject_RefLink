@@ -34,21 +34,26 @@ export const CreatePage = () => {
   }
 
   return (
-    <div className="row">
-      <div className="col s8 offset-s2" style={{ paddingTop: '2rem' }}>
-        <div class="form-group">
-          <label htmlFor="link">Wkliej link</label>
-          <input
-            placeholder="https://przykład.com/"
-            id="link"
-            type="text"
-            class="form-control"
-            value={link}
-            onChange={e => setLink(e.target.value)}
-            onKeyPress={pressHandler} />
-        </div>
-        <button type="button" class="btn btn-primary btn-block" onClick={createHandler}>Stworzyć skrót</button>
+    <header class="masthead">
+      <div class="fon">
+      <div class="container">
+        <div class="masthead-heading text-uppercase">
+          <form>
+          <div class="form-group">
+            <label htmlFor="link">Wkliej link</label>
+            <input
+              placeholder="https://przykład.com/"
+              id="link"
+              type="text"
+              class="form-control"
+              value={link}
+              onChange={e => setLink(e.target.value)}
+              onKeyPress={pressHandler} />
+          </div>
+          <button type="button" class="btn btn-primary btn-block text-uppercase js=scroll-trigger" onClick={createHandler}>Stworzyć skrót</button>
+        </form>
+        </div></div>
       </div>
-    </div>
+    </header>
   )
 }
