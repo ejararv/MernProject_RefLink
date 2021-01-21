@@ -7,8 +7,8 @@ export const LinksList = ({ links }) => {
   }
 
   return (
-    <table class="table">
-      <thead>
+    <table class="table section-heading">
+      <thead class=" text-uppercase">
       <tr>
         <th>#</th>
         <th>Oryginalny link</th>

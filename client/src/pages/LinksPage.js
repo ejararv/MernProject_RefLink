@@ -1,13 +1,13 @@
-import React, {useCallback, useContext, useEffect, useState} from 'react'
-import {useHttp} from '../hooks/http.hook'
-import {AuthContext} from '../context/AuthContext'
-import {Loader} from '../components/Loader'
-import {LinksList} from '../components/LinksList'
+import React, { useCallback, useContext, useEffect, useState } from 'react'
+import { useHttp } from '../hooks/http.hook'
+import { AuthContext } from '../context/AuthContext'
+import { Loader } from '../components/Loader'
+import { LinksList } from '../components/LinksList'
 
 export const LinksPage = () => {
   const [links, setLinks] = useState([])
-  const {loading, request} = useHttp()
-  const {token} = useContext(AuthContext)
+  const { loading, request } = useHttp()
+  const { token } = useContext(AuthContext)
 
   const fetchLinks = useCallback(async () => {
     try {
@@ -15,7 +15,7 @@ export const LinksPage = () => {
         Authorization: `Bearer ${token}`
       })
       setLinks(fetched)
-    } catch (e) {}
+    } catch (e) { }
   }, [token, request])
 
   useEffect(() => {
@@ -23,13 +23,18 @@ export const LinksPage = () => {
   }, [fetchLinks])
 
   if (loading) {
-    return <Loader/>
+    return <Loader />
   }
 
   return (
     <>
-      {!loading && <LinksList links={links} />}
+    <body class="background-image: url(/client/public/assets/map.jpg);">
+ 
+        <div class="container">
+          {!loading && <LinksList links={links} />}
+        </div>
 
+      </body>
     </>
   )
 }

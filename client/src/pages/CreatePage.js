@@ -34,9 +34,11 @@ export const CreatePage = () => {
   }
 
   return (
+    <body>
     <header class="masthead">
       <div class="fon">
       <div class="container">
+        
         <div class="masthead-heading text-uppercase">
           <form>
           <div class="form-group">
@@ -55,5 +57,64 @@ export const CreatePage = () => {
         </div></div>
       </div>
     </header>
+
+    <section class="page-section" id="about">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">O nas</h2>
+            <h3 class="section-subheading text-muted">Program partnerski: dołącz do nas!</h3>
+        </div>
+        <ul class="timeline">
+            <li>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/buyer.jpg" alt="" /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Dla kupujących</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Zaoszczędź do 90% na zakupach <br /> 
+                                                                      Oszczędzaj na towarach i usługach online<br />
+                                                                      Sekretne promocje z rabatami do 99%<br />
+                                                                      Wygodne zakupy + Cashback w smartfonie</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/blogger.jpg" alt="" /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Dla webmasterów</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Zarabiaj na ruchu / rekomendacjach / blogu<br /> 
+                                                                      Pobierz produkt do recenzji (bezpłatnie)<br /> 
+                                                                      Przejrzyste statystyki<br /> 
+                                                                      Najlepsze oferty</p></div>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/marketing.jpg" alt="" /></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="subheading">Dla reklamodawców</h4>
+                    </div>
+                    <div class="timeline-body"><p class="text-muted">Większy ruch biznesowy<br />
+                                                                      Wzrost sprzedaży<br />
+                                                                      Nowi lojalni klienci</p></div>
+                </div>
+            </li>
+            <li class="timeline-inverted">
+                <div class="timeline-image">
+                    <h4>
+                        Bądź częścią
+                        <br />
+                        naszego
+                        <br />
+                        zespołu!
+                    </h4>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+</body>
+
   )
 }
