@@ -46,9 +46,9 @@ export const AuthPage = () => {
   return (
     <header class="login">
       <div class="row">
-        <div class="col-6">
+        <div class="col-6 hide">
         </div>
-        <div class="col-6">
+        <div class="col-6 full">
           <div class="fon">
             <div class="container">
               <form>

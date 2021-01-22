@@ -4,9 +4,6 @@ export const LinkCard = ({ link }) => {
   return (
     <>
       <h2 class=" text-uppercase">Szczegóły linku</h2>
-
-
-
       <table class="table">
         <tbody>
           <tr>

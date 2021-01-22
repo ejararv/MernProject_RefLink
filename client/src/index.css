@@ -10426,3 +10426,12 @@
   .footer .yel{
     color: #fed136;
   }
+
+  @media only screen and (max-width: 770px) {
+    .hide{
+        display: none;
+    }
+    .full{
+        min-width: 100%;
+    }
+}

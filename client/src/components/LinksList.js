@@ -12,7 +12,7 @@ export const LinksList = ({ links }) => {
       <tr class="table-active">
         <th>#</th>
         <th>Oryginalny link</th>
-        <th>Twój link</th>
+        <th class="hide">Twój link</th>
         <th>Zobacz szczegóły</th>
       </tr>
       </thead>
@@ -23,7 +23,7 @@ export const LinksList = ({ links }) => {
           <tr key={link._id}>
             <th>{index + 1}</th>
             <td>{link.from}</td>
-            <td>{link.to}</td>
+            <td class="hide">{link.to}</td>
             <td>
             <a class="btn btn-primary text-uppercase" href={`/detail/${link._id}`}>Otwórz</a>
             </td>
