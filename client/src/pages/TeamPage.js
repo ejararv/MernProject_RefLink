@@ -64,7 +64,8 @@ export const TeamPage = () => {
                             <div class="team-member">
                                 <img class="mx-auto rounded-circle" src="assets/team-1.jpg" alt="" />
                                 <h4>Lizaveta Sobaleva</h4>
-                                <p class="text-muted">Lead Designer</p>
+                                <p class="text-muted">Lead Designer<br />Junior Developer</p>
+
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -77,7 +78,6 @@ export const TeamPage = () => {
                     </div>
                 </div>
             </section>
-
         </>
     )
 }
