@@ -22,6 +22,7 @@ export const Navbar = () => {
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item"><a class="nav-link" href="/create">Utwórz link</a></li>
           <li class="nav-item"><a class="nav-link" href="/links">Lista linków</a></li>
+          <li class="nav-item"><a class="nav-link" href="/team">Nasz zespół</a></li>
           <li class="nav-item"><a class="nav-link" href="/" onClick={logoutHandler}>Wylogój</a></li>
         </ul>
       </div>

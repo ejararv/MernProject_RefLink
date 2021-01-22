@@ -6128,6 +6128,7 @@
   
   .bg-light {
     background-color: #f8f9fa !important;
+    min-height: 100vh;
   }
   
   a.bg-light:hover, a.bg-light:focus,

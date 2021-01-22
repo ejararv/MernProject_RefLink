@@ -3,7 +3,7 @@ import React from 'react'
 export const LinkCard = ({ link }) => {
   return (
     <>
-      <h2>Szczegóły linku</h2>
+      <h2 class=" text-uppercase">Szczegóły linku</h2>
 
 
 

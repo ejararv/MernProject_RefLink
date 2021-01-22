@@ -30,9 +30,13 @@ export const DetailPage = () => {
 
   return (
     <>
+    <body class="bg-light">
+        <div class="container">
       { !loading && link && <LinkCard link={link} /> }
 
       <a class="btn btn-primary" href="/links">Powrót do listy</a>
+      </div>
+      </body>
     </>
   )
 }

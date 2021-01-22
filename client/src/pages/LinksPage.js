@@ -26,15 +26,11 @@ export const LinksPage = () => {
     return <Loader />
   }
 
-  return (
-    <>
-    <body class="background-image: url(/client/public/assets/map.jpg);">
- 
+  return (    
+      <body class="bg-light">
         <div class="container">
           {!loading && <LinksList links={links} />}
         </div>
-
-      </body>
-    </>
+      </body>    
   )
 }
