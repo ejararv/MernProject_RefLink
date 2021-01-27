@@ -4,6 +4,7 @@
 * [Screenshots](#screenshots)
 * [Technologies Used](#technologies-used)
 * [Setup](#setup)
+https://img.shields.io/badge/React-hook-green
 
 
 ## General info
@@ -25,6 +26,8 @@ The background photos change every time due to the use of the [Unsplash Source](
 1.  [React](https://github.com/facebook/react)
 2.  [Node.js](https://github.com/nodejs/node)
 3.  [MongoDB](https://github.com/mongodb/mongo)
+
+
 
 
 ## Setup
