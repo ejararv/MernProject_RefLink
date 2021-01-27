@@ -13,6 +13,8 @@ The benefits are clear to each side:
 * for advertisers - an increase in turnover, new regular customers and an increase in brand awareness;
 * for both - a convenient and honest service, which is constantly being improved.
 
+The background photos change every time due to the use of the [Unsplash Source](https://source.unsplash.com).
+
 
 ## Screenshots
 ![screenshot of sample](screenshot-01.png)
