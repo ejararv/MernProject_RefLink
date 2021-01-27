@@ -21,15 +21,16 @@ The benefits are clear to each side:
 
 ## Technology Used:
 1.  [React](https://github.com/facebook/react)
-2.	https://www.npmjs.com/package/shortid
-3.	https://www.npmjs.com/package/bcrypt
-4.	https://www.npmjs.com/package/react-router-dom
+2.  Node.js
+3.  NongoDB
+4.	https://www.npmjs.com/package/shortid
+5.	https://www.npmjs.com/package/bcrypt
+6.	https://www.npmjs.com/package/react-router-dom
 
 
 ## Setup
 To run this project, install it locally using npm:
 
 ```
-$ npm install
-$ npm start
+$ npm run dev
 ```
