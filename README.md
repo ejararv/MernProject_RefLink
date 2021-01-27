@@ -1,4 +1,4 @@
-# MernProject <img src="https://img.shields.io/badge/platform-node-lightgrey.svg?style=flat" alt="platform">
+# MernProject <img src="https://img.shields.io/badge/platform-node-blue.svg?style=flat" alt="platform">
 ## Table of contents
 * [General info](#general-info)
 * [Screenshots](#screenshots)
