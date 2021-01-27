@@ -23,9 +23,6 @@ The benefits are clear to each side:
 1.  [React](https://github.com/facebook/react)
 2.  [Node.js](https://github.com/nodejs/node)
 3.  [MongoDB](https://github.com/mongodb/mongo)
-4.	https://www.npmjs.com/package/shortid
-5.	https://www.npmjs.com/package/bcrypt
-6.	https://www.npmjs.com/package/react-router-dom
 
 
 ## Setup
