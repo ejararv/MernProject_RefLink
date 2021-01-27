@@ -2,7 +2,7 @@
 ## Table of contents
 * [General info](#general-info)
 * [Screenshots](#screenshots)
-* [Technology Used](#technologies-used)
+* [Technologies Used](#technologies-used)
 * [Setup](#setup)
 
 
@@ -19,7 +19,7 @@ The benefits are clear to each side:
 ![screenshot of sample](screenshot-02.png)
 
 
-## Technology Used:
+## Technologies Used:
 1.  [React](https://github.com/facebook/react)
 2.  Node.js
 3.  NongoDB
