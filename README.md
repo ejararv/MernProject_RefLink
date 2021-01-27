@@ -1,4 +1,4 @@
-# MernProject
+# MernProject <img src="https://img.shields.io/badge/platform-node-lightgrey.svg?style=flat" alt="platform">
 ## Table of contents
 * [General info](#general-info)
 * [Screenshots](#screenshots)
@@ -21,8 +21,8 @@ The benefits are clear to each side:
 
 ## Technologies Used:
 1.  [React](https://github.com/facebook/react)
-2.  Node.js
-3.  NongoDB
+2.  [Node.js](https://github.com/nodejs/node)
+3.  [MongoDB](https://github.com/mongodb/mongo)
 4.	https://www.npmjs.com/package/shortid
 5.	https://www.npmjs.com/package/bcrypt
 6.	https://www.npmjs.com/package/react-router-dom
