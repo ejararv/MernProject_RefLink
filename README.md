@@ -1,5 +1,5 @@
 # MernProject <img src="https://img.shields.io/badge/platform-node-blue.svg?style=flat" alt="platform">
-<https://img.shields.io/badge/React-hook-green>
+
 ## Table of contents
 * [General info](#general-info)
 * [Screenshots](#screenshots)
