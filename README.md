@@ -15,6 +15,6 @@
 
 ## Technology Used:
 
-1.	
-2.	
-3.	
+1.	https://www.npmjs.com/package/shortid
+2.	https://www.npmjs.com/package/bcrypt
+3.	https://www.npmjs.com/package/react-router-dom
