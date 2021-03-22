@@ -26,11 +26,13 @@ export const LinksPage = () => {
     return <Loader />
   }
 
-  return (    
-      <body class="bg-light">
-        <div class="container">
-          {!loading && <LinksList links={links} />}
-        </div>
-      </body>    
+  return (
+    <>
+      <body className="bg-light"><div className="content">
+        <div className="container">
+          
+          {!loading && <LinksList links={links} />}</div></div>
+      </body>
+    </>
   )
 }

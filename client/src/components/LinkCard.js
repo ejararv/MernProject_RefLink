@@ -3,8 +3,8 @@ import React from 'react'
 export const LinkCard = ({ link }) => {
   return (
     <>
-      <h2 class=" text-uppercase">Szczegóły linku</h2>
-      <table class="table">
+      <h2 className="text-uppercase">Szczegóły linku</h2>
+      <table className="table show-info">
         <tbody>
           <tr>
             <th>Twój link:</th>
@@ -16,7 +16,7 @@ export const LinkCard = ({ link }) => {
           </tr>
           <tr>
             <th>Liczba kliknięć w link:</th>
-            <td>{link.click}</td>
+            <td>{link.clicks}</td>
           </tr>
           <tr>
             <th>Data utworzenia:</th>

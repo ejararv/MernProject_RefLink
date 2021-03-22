@@ -17,7 +17,7 @@ export const RegisrationPage = () => {
   const message = useMessage()
   const { loading, request, error, clearError } = useHttp()
   const [form, setForm] = useState({
-    email: '', password: '', user_name: '', last_name: ''
+    email: '', password: ''
   })
 
 
@@ -59,27 +59,7 @@ export const RegisrationPage = () => {
                 <div class="form-group">
                   <h5 class="card-title">Zarejestruj sie</h5>
                   <div>
-                    <div class="form-group">
-                      <label htmlFor="first_name">Imię</label>
-                      <input
-                        placeholder="Wpisz imię"
-                        id="first_name"
-                        type="text"
-                        name="first_name"
-                        class="form-control"
-                        onChange={changeHandler} />
-                    </div>
-
-                    <div class="form-group">
-                      <label htmlFor="last_name">Nazwisko</label>
-                      <input
-                        placeholder="Wpisz nazwisko"
-                        id="last_name"
-                        type="text"
-                        name="last_name"
-                        class="form-control"
-                        onChange={changeHandler} />
-                    </div>
+                    
 
                     <div class="form-group">
                       <label htmlFor="email">Email</label>

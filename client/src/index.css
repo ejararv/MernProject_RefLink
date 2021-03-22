@@ -59,6 +59,7 @@
     color: #212529;
     text-align: left;
     background-color: #fff;
+    height: 100%;
   }
   
   [tabindex="-1"]:focus:not(:focus-visible) {
@@ -6128,7 +6129,7 @@
   
   .bg-light {
     background-color: #f8f9fa !important;
-    min-height: 83vh;
+    min-height: 85vh;
   }
   
   a.bg-light:hover, a.bg-light:focus,
@@ -10119,6 +10120,7 @@
     background-attachment: scroll;
     background-position: center center;
     background-size: cover;
+    height: 75vh;
   }
 
   header.login {
@@ -10128,17 +10130,23 @@
     background-attachment: scroll;
     background-position: center center;
     background-size: cover;
+    height: 100vh;
+  }
+  header.masthead .fon{
+    height: 75vh;
   }
   
   .fon {
     padding-top: 10.5rem;
     padding-bottom: 10rem;
     background: rgba(0,0,0,.6);
+    height: 100vh;
   }
   header.login .reg {
     padding-top: 10.5rem;
     padding-bottom: 10rem;
     background: rgba(0,0,0,.6);
+    height: 100vh;
   }
 
   header.masthead .masthead-subheading {
@@ -10279,7 +10287,7 @@
     margin-bottom: 0;
   }
   
-  @media (min-width: 768px) {
+  @media (min-width: 770px) {
     .timeline:before {
       left: 50%;
     }
@@ -10308,6 +10316,10 @@
       float: right;
       padding: 0 30px 20px 20px;
       text-align: left;
+    }
+    .show-link {
+      display: none;
+      color: black;
     }
   }
   @media (min-width: 992px) {
@@ -10422,6 +10434,7 @@
     background-color: #212529;
     font-size: 0.9rem;
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    height: 8vh;
   }
   .footer .yel{
     color: #fed136;
@@ -10433,5 +10446,12 @@
     }
     .full{
         min-width: 100%;
+    }
+    .mini{
+      max-width: 70vw;
+    }
+    .btn-link {
+      color: black;
+      text-decoration: underline;
     }
 }

@@ -7,30 +7,46 @@ export const LinksList = ({ links }) => {
   }
 
   return (
-    <table class="table section-heading">
-      <thead class=" text-uppercase">
-      <tr class="table-active">
-        <th>#</th>
-        <th>Oryginalny link</th>
-        <th class="hide">Twój link</th>
-        <th>Zobacz szczegóły</th>
-      </tr>
-      </thead>
-
-      <tbody class="table-active">
-      { links.map((link, index) => {
-        return (
-          <tr key={link._id}>
-            <th>{index + 1}</th>
-            <td>{link.from}</td>
-            <td class="hide">{link.to}</td>
-            <td>
-            <a class="btn btn-primary text-uppercase" href={`/detail/${link._id}`}>Otwórz</a>
-            </td>
+    <div className="container">
+      <table class="table section-heading list">
+        <thead class=" text-uppercase">
+          <tr class="table-active">
+            <th className="hide">#</th>
+            <th className="hide">Oryginalny link</th>
+            <th className="hide">Twój link</th>
+            <th className="show-link">Wybierz link aby zobaczyć szczegóły</th>
+            <th className="hide">Zobacz szczegóły</th>
           </tr>
-        )
-      }) }
-      </tbody>
-    </table>
-  )
-}
+        </thead>
+
+        <tbody class="table-active">
+          {links.map((link, index) => {
+            return (
+              <tr key={link._id}>
+                <th className="hide">{index + 1}</th>
+                <td className="hide">{link.from}</td>
+                <td className="hide">{link.to}</td>
+                <td className="show-link">
+                  <Link
+                    className="btn btn-link float-none"
+                    to={`/detail/${link._id}`}
+                  >
+                    {link.to}
+                  </Link>
+                </td>
+                <td className="hide">
+                  <Link
+                    className="btn btn-primary float-none"
+                    to={`/detail/${link._id}`}
+                  >
+                    Otwórz
+                  </Link>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+};

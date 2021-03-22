@@ -1,18 +1,38 @@
 import React, { useCallback, useContext, useEffect, useState } from 'react'
 import emailjs from 'emailjs-com';
-
+import {useMessage} from '../hooks/message.hook'
+import { useHttp } from '../hooks/http.hook'
 
 
 export const TeamPage = () => {
 
-    function sendEmail(e) {
-        e.preventDefault();
+    const message = useMessage()
+    const { loading, request, error, clearError } = useHttp()
+
+    useEffect(() => {
+        message(error)
+        clearError()
+      }, [error, message, clearError])
+    
+      useEffect(() => {
+        window.M.updateTextFields()
+      }, [])
+    
+
+
+      function clearForm(){
+        var form=  document.getElementsByName('contact-form').updateTextFields
+          
+      }
+      function sendEmail(e) {
+        e.preventDefault()
 
         emailjs.sendForm('service_drn7479', 'template_reflink', e.target, 'user_QyVIERmwsAfUqFrZoMeCQ')
             .then((result) => {
-                console.log(result.text);
+                 message(result.text = 'Dziekuje ',)
+               
             }, (error) => {
-                console.log(error.text);
+                message(error.text = 'Błąd')
             });
     }
 
@@ -25,7 +45,7 @@ export const TeamPage = () => {
                         <div class="text-center">
                             <h2 class="section-heading text-uppercase">SKONTAKTUJ SIĘ Z NAMI</h2>
                         </div>
-                        <form className="contact-form" onSubmit={sendEmail}>
+                        <form className="contact-form" id="contact-form"onSubmit={sendEmail} >
                             <div class="row align-items-stretch mb-5">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -72,7 +92,7 @@ export const TeamPage = () => {
                             <div class="team-member">
                                 <img class="mx-auto rounded-circle" src="assets/team-3.jpg" alt="" />
                                 <h4>Vladimir Rashatsko</h4>
-                                <p class="text-muted">Lead Developer</p>
+                                <p class="text-muted">Lead Designer<br />Lead Developer</p>
                             </div>
                         </div>
                     </div>

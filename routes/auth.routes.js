@@ -12,8 +12,7 @@ router.post(
 [
     check('email', 'Niekorektny email').isEmail(),
     check('password', 'Minimum 6 znaków').isLength({min: 6}),
-    check('first_name', 'Wpisz imie').isLength({min: 1}),
-    check('last_name', 'Wpisz Nazwisko').isLength({min:1})
+   
 ],
 
 async (req, res) => {
@@ -27,7 +26,7 @@ async (req, res) => {
         })
       }
   
-      const {email, password,first_name, last_name } = req.body
+      const {email, password } = req.body
   
       const candidate = await User.findOne({ email })
   
@@ -36,7 +35,7 @@ async (req, res) => {
       }
   
       const hashedPassword = await bcrypt.hash(password, 12)
-      const user = new User({ email, password: hashedPassword ,first_name, last_name})
+      const user = new User({ email, password: hashedPassword})
   
       await user.save()
   
