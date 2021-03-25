@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useState } from 'react'
+import React, { useEffect,  } from 'react'
 import emailjs from 'emailjs-com';
 import {useMessage} from '../hooks/message.hook'
 import { useHttp } from '../hooks/http.hook'
@@ -7,7 +7,7 @@ import { useHttp } from '../hooks/http.hook'
 export const TeamPage = () => {
 
     const message = useMessage()
-    const { loading, request, error, clearError } = useHttp()
+    const { error, clearError } = useHttp()
 
     useEffect(() => {
         message(error)
@@ -19,22 +19,28 @@ export const TeamPage = () => {
       }, [])
     
 
+    //   const form = document.getElementsByName('contact-form') 
 
-      function clearForm(){
-        var form=  document.getElementsByName('contact-form').updateTextFields
-          
-      }
+    //   function clearForm(){
+    //     var form =  document.getElementsByName('contact-form')
+    //     form.values=''
+    //   }
       function sendEmail(e) {
         e.preventDefault()
 
         emailjs.sendForm('service_drn7479', 'template_reflink', e.target, 'user_QyVIERmwsAfUqFrZoMeCQ')
             .then((result) => {
-                 message(result.text = 'Dziekuje ',)
+                
+                 message(result.text = 'Dziekuje ')
+                   
                
             }, (error) => {
                 message(error.text = 'Błąd')
-            });
-    }
+            })
+
+          
+    } 
+    
 
 
     return (
@@ -45,7 +51,7 @@ export const TeamPage = () => {
                         <div class="text-center">
                             <h2 class="section-heading text-uppercase">SKONTAKTUJ SIĘ Z NAMI</h2>
                         </div>
-                        <form className="contact-form" id="contact-form"onSubmit={sendEmail} >
+                        <form className="contact-form" id="contact-form"onSubmit={sendEmail }  >
                             <div class="row align-items-stretch mb-5">
                                 <div class="col-md-6">
                                     <div class="form-group">
