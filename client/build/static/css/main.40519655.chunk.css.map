@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAKA,yBACI,WACI,YACJ,CACH","file":"main.40519655.chunk.css","sourcesContent":["@import \"~materialize-css/dist/css/materialize.min.css\";\r\n@import \"~bootstrap/dist/css/bootstrap.css\";\r\n\r\n\r\n\r\n@media all and (max-width:700px) {\r\n    .need-hide{\r\n        display:none;\r\n    }\r\n }"]}
