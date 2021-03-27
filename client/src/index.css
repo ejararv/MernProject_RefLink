@@ -10190,6 +10190,16 @@
       margin-bottom: 3rem;
     }
   }
+  @media only screen and (max-width: 410px) {
+
+    header.masthead .container{
+      margin-top: -30%;
+    }
+    header.masthead .section-heading {
+      font-size: 1.75rem;
+    }
+    
+  }
   
   .timeline {
     position: relative;
