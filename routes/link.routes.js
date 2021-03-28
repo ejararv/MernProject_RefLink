@@ -50,4 +50,13 @@ router.get('/:id', auth, async (req, res) => {
   }
 })
 
+router.delete('/:id', auth, async (req, res) =>{
+  try{
+    const dellink = await Link.findByIdAndDelete(req.params.id)
+    res.json(dellink)
+  }catch(e) {
+    res.status(500).json({ message: 'Błąd' })
+  }
+} )
+
 module.exports = router

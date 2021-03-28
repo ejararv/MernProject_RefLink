@@ -25,6 +25,7 @@ export const CreatePage = () => {
   }
 
   const createHandler = async event => {
+  
     try {
       const data = await request('/api/link/generate', 'POST', { from: link }, {
         Authorization: `Bearer ${auth.token}`

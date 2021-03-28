@@ -11,7 +11,7 @@ export const LinksList = ({ links }) => {
       <table class="table section-heading list">
         <thead class=" text-uppercase">
           <tr class="table-active">
-            <th className="hide">#</th>
+            <th>#</th>
             <th className="hide">Oryginalny link</th>
             <th className="hide">Twój link</th>
             <th className="show-link">Wybierz link aby zobaczyć szczegóły</th>
@@ -23,7 +23,7 @@ export const LinksList = ({ links }) => {
           {links.map((link, index) => {
             return (
               <tr key={link._id}>
-                <th className="hide">{index + 1}</th>
+                <th>{index + 1}</th>
                 <td className="hide">{link.from}</td>
                 <td className="hide">{link.to}</td>
                 <td className="show-link">
@@ -31,7 +31,7 @@ export const LinksList = ({ links }) => {
                     className="btn btn-link float-none"
                     to={`/detail/${link._id}`}
                   >
-                    {link.to}
+                    {link.from}
                   </Link>
                 </td>
                 <td className="hide">
