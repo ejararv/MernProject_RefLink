@@ -42,7 +42,7 @@ async (req, res) => {
       res.status(201).json({ message: 'Utworzono użytkownika' })
   
     } catch (e) {
-      res.status(500).json({ message: 'Coś poszło nie tak. Proszę spróbuj ponownie' })
+      res.status(500).json({ message: 'Coś poszło nie tak. Proszę spróbuj ponownie2' })
     }
   })
 
