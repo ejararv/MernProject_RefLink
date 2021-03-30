@@ -8,6 +8,7 @@ import { Loader } from './components/Loader'
 import { Footer } from './components/Footer'
 import 'materialize-css'
 
+
 function App() {
   const { token, login, logout, userId, ready } = useAuth()
   const isAuthenticated = !!token
@@ -22,9 +23,11 @@ function App() {
       token, login, logout, userId, isAuthenticated
     }}>
       <Router>
+        
         {isAuthenticated && <Navbar />}
         {routes}
         {isAuthenticated && <Footer />}
+        
       </Router>
     </AuthContext.Provider>
   )

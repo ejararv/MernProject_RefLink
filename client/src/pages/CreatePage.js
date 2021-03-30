@@ -3,6 +3,8 @@ import { useHttp } from '../hooks/http.hook'
 import { AuthContext } from '../context/AuthContext'
 import { useHistory } from 'react-router-dom'
 
+
+
 export const CreatePage = () => {
   const history = useHistory()
   const auth = useContext(AuthContext)
@@ -101,8 +103,9 @@ export const CreatePage = () => {
                                                                       Nowi lojalni klienci</p></div>
                 </div>
             </li>
-            <li class="timeline-inverted">
-                <div class="timeline-image">
+            
+                <li class="timeline-inverted">
+               
                     <h4>
                         Bądź częścią
                         <br />
@@ -110,8 +113,10 @@ export const CreatePage = () => {
                         <br />
                         zespołu!
                     </h4>
-                </div>
+              
             </li>
+        
+            
         </ul>
     </div>
 </section>

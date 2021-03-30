@@ -1,7 +1,8 @@
-import React, { useContext } from 'react'
+import React from 'react'
 
 export const Footer = () => {
     return (
+       
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
@@ -11,5 +12,6 @@ export const Footer = () => {
                 </div>
             </div>
         </footer>
+       
     )
 }

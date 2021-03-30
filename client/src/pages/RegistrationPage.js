@@ -2,10 +2,8 @@
 
 import { useHttp } from '../hooks/http.hook'
 import { useMessage } from '../hooks/message.hook'
-import { AuthContext } from '../context/AuthContext'
-import { useContext, useEffect, useState } from 'react'
-import { Redirect } from 'react-router-dom'
-import { AuthPage } from './AuthPage'
+
+import {  useEffect, useState } from 'react'
 
 
 
@@ -13,9 +11,9 @@ import { AuthPage } from './AuthPage'
 export const RegisrationPage = () => {
 
 
-  const auth = useContext(AuthContext)
+  
   const message = useMessage()
-  const { loading, request, error, clearError } = useHttp()
+  const {  request, error, clearError } = useHttp()
   const [form, setForm] = useState({
     email: '', password: ''
   })

@@ -2,8 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useHttp } from '../hooks/http.hook'
 import { useMessage } from '../hooks/message.hook'
 import { AuthContext } from '../context/AuthContext'
-import { RegisrationPage } from './RegistrationPage'
-import { Redirect } from 'react-router-dom'
+
 
 export const AuthPage = () => {
   const auth = useContext(AuthContext)
@@ -29,12 +28,12 @@ export const AuthPage = () => {
     setForm({ ...form, [event.target.name]: event.target.value })
   }
 
-  const registerHandler = async () => {
-    try {
-      const data = await request('/api/auth/register', 'POST', { ...form })
-      message(data.message)
-    } catch (e) { }
-  }
+  // const registerHandler = async () => {
+  //   try {
+  //     const data = await request('/api/auth/register', 'POST', { ...form })
+  //     message(data.message)
+  //   } catch (e) { }
+  // }
 
   const loginHandler = async () => {
     try {
