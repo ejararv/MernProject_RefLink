@@ -10592,6 +10592,10 @@ header.masthead .masthead-heading {
     Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+.page-section .btn-link {
+  color: white;
+  text-decoration: none;
+}
 
 @media only screen and (max-width: 770px) {
   header.masthead .container {
