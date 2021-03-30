@@ -173,5 +173,5 @@ export const CreatePage = () => {
         </div>
       </section>
     </body>
-  );
-};
+  )
+}
