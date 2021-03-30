@@ -21,12 +21,12 @@ export const CreatePage = () => {
         const data = await request('/api/link/generate', 'POST', { from: link }, {
           Authorization: `Bearer ${auth.token}`
         })
-        history.push(`/detail/${data.link._id}`)
+        history.push(`/links`)
       } catch (e) { }
     }
   }
 
-  const createHandler = async event => {
+  const createHandler = async () => {
   
     try {
       const data = await request('/api/link/generate', 'POST', { from: link }, {

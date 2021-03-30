@@ -22,7 +22,7 @@ export const DetailPage = () => {
     } catch (e) {}
   }, [token, linkId, request]);
 
-  const deleteLink = () => {
+  const deleteLink = async () => {
     try {
       const del =  request(`/api/link/${linkId}`, "DELETE", null, {
         Authorization: `Bearer ${token}`,

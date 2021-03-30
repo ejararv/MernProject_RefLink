@@ -4,6 +4,7 @@ import { useHttp } from '../hooks/http.hook'
 import { useMessage } from '../hooks/message.hook'
 
 import {  useEffect, useState } from 'react'
+import { event } from 'jquery'
 
 
 
@@ -37,11 +38,23 @@ export const RegisrationPage = () => {
     setForm({ ...form, [event.target.name]: event.target.value })
   }
 
+
+  const registerPress = async event => {
+    if( event.key === 'Enter'){
+    try {
+      const data = await request('/api/auth/register', 'POST', { ...form })
+      message(data.message)
+    }
+     catch (e) { }
+  }
+}
+
   const registerHandler = async () => {
     try {
       const data = await request('/api/auth/register', 'POST', { ...form })
       message(data.message)
-    } catch (e) { }
+    }
+     catch (e) { }
   }
 
 
@@ -68,7 +81,8 @@ export const RegisrationPage = () => {
                         name="email"
                         class="form-control"
                         value={form.email}
-                        onChange={changeHandler} />
+                        onChange={changeHandler}
+                        onKeyPress={registerPress} />
                     </div>
 
                     <div class="form-group">
@@ -80,7 +94,9 @@ export const RegisrationPage = () => {
                         name="password"
                         class="form-control"
                         value={form.password}
-                        onChange={changeHandler} />
+                        onChange={changeHandler}
+                        onKeyPress={registerPress}
+                         />
                     </div>
                   </div>
                 </div>

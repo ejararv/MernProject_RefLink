@@ -28,12 +28,13 @@ export const AuthPage = () => {
     setForm({ ...form, [event.target.name]: event.target.value })
   }
 
-  // const registerHandler = async () => {
-  //   try {
-  //     const data = await request('/api/auth/register', 'POST', { ...form })
-  //     message(data.message)
-  //   } catch (e) { }
-  // }
+  const loginPress = async () => {
+    try {
+      const data = await request('/api/auth/login', 'POST', { ...form })
+      auth.login(data.token, data.userId)
+    } catch (e) { }
+  }
+
 
   const loginHandler = async () => {
     try {
@@ -63,7 +64,8 @@ export const AuthPage = () => {
                         name="email"
                         class="form-control"
                         value={form.email}
-                        onChange={changeHandler} />
+                        onChange={changeHandler}
+                        onKeyPress={loginPress} />
                     </div>
                     <div class="form-group">
                       <label htmlFor="email">Hasło</label>
@@ -74,7 +76,8 @@ export const AuthPage = () => {
                         name="password"
                         class="form-control"
                         value={form.password}
-                        onChange={changeHandler} />
+                        onChange={changeHandler}
+                        onKeyPress={loginPress} />
                     </div>
                   </div>
                 </div>

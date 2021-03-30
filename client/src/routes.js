@@ -6,7 +6,7 @@ import {DetailPage} from './pages/DetailPage'
 import {AuthPage} from './pages/AuthPage'
 import { RegisrationPage } from './pages/RegistrationPage'
 import { TeamPage } from './pages/TeamPage'
-import { DeleteLinkPage } from './components/DeleteLinkPage'
+
 
 export const useRoutes = isAuthenticated => {
   if (isAuthenticated) {
@@ -24,10 +24,7 @@ export const useRoutes = isAuthenticated => {
         <Route path="/team" exact>
           <TeamPage />
         </Route>   
-        <Route path="/deleted" exact>
-          <DeleteLinkPage />
-        </Route>       
-
+          
         <Redirect to="/create" />
       </Switch>
     )
