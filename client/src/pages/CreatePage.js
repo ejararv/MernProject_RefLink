@@ -158,15 +158,14 @@ export const CreatePage = () => {
             </li>
 
             <li class="timeline-inverted">
-              <div class="timeline-image">
-                <a class="btn btn-link float-right rounded-circle" href="/team">                
+              <div class="timeline-image">               
                 <h4>
                   Bądź częścią
                   <br />
                   naszego
                   <br />
                   zespołu!
-                </h4></a>
+                </h4>
               </div>
             </li>
           </ul>
