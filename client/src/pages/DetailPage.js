@@ -5,6 +5,8 @@ import { AuthContext } from "../context/AuthContext";
 import { LinkCard } from "../components/LinkCard";
 
 
+
+
 export const DetailPage = () => {
   const { token } = useContext(AuthContext);
   const { request, loading } = useHttp();
@@ -54,7 +56,9 @@ export const DetailPage = () => {
           >
             Usun link
           </a>
+          
         </div>
+   
       </body>
     </>
   );

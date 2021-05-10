@@ -1,6 +1,6 @@
  {
     "port": 5000,
     "jwtSecret": "12345",
-    "mongoUri": "mongodb+srv://ejararv:6077832Gt@cluster0.at8ax.mongodb.net/app?retryWrites=true&w=majority",
-    "baseUrl": "https://reflinkmern.herokuapp.com"
+    "mongoUri": "mongodb://reflink:Xn78SCpDqKypC1CTzwk5ED3pjZkOK7kGk13kWP1psqLoMd3xCGgi0Slv7hg75WZWvN1nIfBStWFQ1BJs1ghoSw%3D%3D@reflink.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@reflink@",
+    "baseUrl": "https://reflink.azurewebsites.net"
   }

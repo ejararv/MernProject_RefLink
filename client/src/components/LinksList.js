@@ -2,10 +2,16 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
+
+
+
 export const LinksList = ({ links }) => {
   if (!links.length) {
     return <p className="center">Nie ma linków</p>
   }
+
+
+  
 
 
   // const linkToString =  JSON.stringify(link.to)
@@ -100,6 +106,9 @@ export const LinksList = ({ links }) => {
           })}
         </tbody>
       </table>
+      
+   
     </div>
-  );
-};
+    
+  )
+}
