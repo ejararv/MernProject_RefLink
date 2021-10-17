@@ -158,7 +158,7 @@ export const CreatePage = () => {
             </li>
 
             <li class="timeline-inverted">
-              <div class="timeline-image">               
+              <div class="timeline-image">
                 <h4>
                   Bądź częścią
                   <br />
@@ -172,5 +172,5 @@ export const CreatePage = () => {
         </div>
       </section>
     </body>
-  )
-}
+  );
+};

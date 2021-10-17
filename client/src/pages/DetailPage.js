@@ -4,16 +4,12 @@ import { useHttp } from "../hooks/http.hook";
 import { AuthContext } from "../context/AuthContext";
 import { LinkCard } from "../components/LinkCard";
 
-
-
-
 export const DetailPage = () => {
   const { token } = useContext(AuthContext);
   const { request, loading } = useHttp();
   const [deleteLinkById] = useState();
   const [link, setLink] = useState(null);
   const linkId = useParams().id;
-
 
   const getLink = useCallback(async () => {
     try {
@@ -26,13 +22,13 @@ export const DetailPage = () => {
 
   const deleteLink = async () => {
     try {
-      const del =  request(`/api/link/${linkId}`, "DELETE", null, {
+      const del = request(`/api/link/${linkId}`, "DELETE", null, {
         Authorization: `Bearer ${token}`,
       });
 
       deleteLinkById(del);
     } catch (e) {}
-  }
+  };
 
   useEffect(() => {
     getLink();
@@ -50,15 +46,12 @@ export const DetailPage = () => {
 
           <a
             className="btn btn-primary float-right"
-            
             onClick={deleteLink}
             href="/links"
           >
             Usun link
           </a>
-          
         </div>
-   
       </body>
     </>
   );

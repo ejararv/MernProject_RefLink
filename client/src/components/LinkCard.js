@@ -1,6 +1,4 @@
-import React from 'react'
-
-
+import React from "react";
 
 export const LinkCard = ({ link }) => {
   return (
@@ -10,11 +8,29 @@ export const LinkCard = ({ link }) => {
         <tbody>
           <tr>
             <th>Twój link:</th>
-            <td><a href={link.to} id="to" target="_blank" rel="noopener noreferrer">{link.to}</a></td>
+            <td>
+              <a
+                href={link.to}
+                id="to"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.to}
+              </a>
+            </td>
           </tr>
           <tr>
             <th>Skąd:</th>
-            <td><a href={link.from} id="from" target="_blank" rel="noopener noreferrer">{link.from}</a></td>
+            <td>
+              <a
+                href={link.from}
+                id="from"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.from}
+              </a>
+            </td>
           </tr>
           <tr>
             <th>Liczba kliknięć w link:</th>
@@ -26,7 +42,6 @@ export const LinkCard = ({ link }) => {
           </tr>
         </tbody>
       </table>
-      
     </>
-  )
-}
+  );
+};
