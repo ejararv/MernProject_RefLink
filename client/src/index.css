@@ -10550,7 +10550,7 @@ header.masthead {
 
 header.login {
   color: rgb(255, 255, 255);
-  background-image: url("https://source.unsplash.com/random");
+  background-image: url("./assets/bg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -10595,9 +10595,6 @@ header.masthead .masthead-heading {
 .page-section .btn-link {
   color: white;
   text-decoration: none;
-}
-.bg-light .btn {
-  margin: 10px;
 }
 
 @media only screen and (max-width: 770px) {
@@ -10895,7 +10892,7 @@ section#contact form#contactForm :-ms-input-placeholder {
   color: #fed136;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 770px) {
   .hide {
     display: none;
   }

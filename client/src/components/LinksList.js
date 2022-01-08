@@ -52,9 +52,9 @@ export const LinksList = ({ links }) => {
 
   return (
     <div className="container">
-      <table class="table section-heading list" style={Styles.table}>
-        <thead class=" text-uppercase">
-          <tr class="table-active">
+      <table className="table section-heading list" style={Styles.table}>
+        <thead className=" text-uppercase">
+          <tr className="table-active">
             <th style={Styles.index}>#</th>
             <th className="hide" style={Styles.from}>
               Oryginalny link
@@ -71,27 +71,22 @@ export const LinksList = ({ links }) => {
           </tr>
         </thead>
 
-        <tbody class="table-active">
+        <tbody className="table-active">
           {links.map((link, index) => {
             return (
               <tr key={link._id}>
-                <th style={Styles.index}>{index + 1}</th>
-                <td className="hide" style={Styles.from}>
-                  {link.from.toString()}
-                </td>
-                <td className="hide" style={Styles.to}>
-                  {link.to.toString()}
-                </td>
+                <th>{index + 1}</th>
+                <td className="hide">{link.from}</td>
+                <td className="hide">{link.to}</td>
                 <td className="show-link">
                   <Link
-                    style={Styles.mobile}
                     className="btn btn-link float-none"
                     to={`/detail/${link._id}`}
                   >
-                    {link.from.toString()}
+                    {link.from}
                   </Link>
                 </td>
-                <td className="hide" style={Styles.link}>
+                <td className="hide">
                   <Link
                     className="btn btn-primary float-none"
                     to={`/detail/${link._id}`}

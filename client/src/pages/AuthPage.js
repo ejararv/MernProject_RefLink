@@ -40,17 +40,17 @@ export const AuthPage = () => {
   };
 
   return (
-    <header class="login">
-      <div class="row">
-        <div class="col-6 hide"></div>
-        <div class="col-6 full">
-          <div class="fon">
-            <div class="container">
+    <header className="login">
+      <div className="row">
+        <div className="col-6 hide"></div>
+        <div className="col-6 full">
+          <div className="fon">
+            <div className="container">
               <form>
-                <div class="form-group">
-                  <h5 class="card-title">Zaloguj sie</h5>
+                <div className="form-group">
+                  <h5 className="card-title">Zaloguj sie</h5>
                   <div>
-                    <div class="form-group">
+                    <div className="form-group">
                       <label htmlFor="email">Email</label>
                       <input
                         placeholder="Wpisz email"
@@ -63,7 +63,7 @@ export const AuthPage = () => {
                         onKeyPress={loginPress}
                       />
                     </div>
-                    <div class="form-group">
+                    <div className="form-group">
                       <label htmlFor="email">Hasło</label>
                       <input
                         placeholder="Wpisz hasło"
@@ -78,26 +78,26 @@ export const AuthPage = () => {
                     </div>
                   </div>
                 </div>
-                <div class="form-group form-check">
+                <div className="form-group form-check">
                   <input
                     type="checkbox"
                     class="form-check-input"
                     id="exampleCheck1"
                   />
-                  <label class="form-check-label" for="exampleCheck1">
+                  <label className="form-check-label" for="exampleCheck1">
                     Check me out
                   </label>
                 </div>
                 <div>
                   <a
-                    class="btn btn-primary"
+                    className="btn btn-primary"
                     style={{ marginRight: 10 }}
                     disabled={loading}
                     onClick={loginHandler}
                   >
                     Zaloguj sie
                   </a>
-                  <a class="nav-link" href="/registration">
+                  <a clasNames="nav-link" href="/registration">
                     Nie masz konta? Zarejestruj sie
                   </a>
                 </div>

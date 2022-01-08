@@ -159,13 +159,17 @@ export const CreatePage = () => {
 
             <li class="timeline-inverted">
               <div class="timeline-image">
+<<<<<<< HEAD
+=======
+                <a class="btn btn-link float-right rounded-circle" href="/team">                
+>>>>>>> parent of c372300 (Converted obj link.from ,link.to  to string, fix problems with large links)
                 <h4>
                   Bądź częścią
                   <br />
                   naszego
                   <br />
                   zespołu!
-                </h4>
+                </h4></a>
               </div>
             </li>
           </ul>

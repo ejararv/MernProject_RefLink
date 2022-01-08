@@ -1,6 +1,10 @@
 
 node_modules
+<<<<<<< HEAD
+client/node_modules
 __azurite_db_blob__.json
 __azurite_db_blob_extent__.json
 __azurite_db_queue__.json
 __azurite_db_queue_extent__.json
+=======
+>>>>>>> parent of c372300 (Converted obj link.from ,link.to  to string, fix problems with large links)

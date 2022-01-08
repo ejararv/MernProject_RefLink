@@ -40,12 +40,17 @@ export const DetailPage = () => {
         <div class="container">
           {!loading && link && <LinkCard link={link} />}
 
-          <a className="btn btn-primary float-right" href="/links">
+          <a class="btn btn-primary float-right" href="/links">
             Powrót do listy
           </a>
 
           <a
+<<<<<<< HEAD
             className="btn btn-primary float-right"
+=======
+            class="btn btn-primary float-right"
+            
+>>>>>>> parent of c372300 (Converted obj link.from ,link.to  to string, fix problems with large links)
             onClick={deleteLink}
             href="/links"
           >
