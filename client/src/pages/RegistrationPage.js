@@ -1,8 +1,6 @@
 import { useHttp } from "../hooks/http.hook";
 import { useMessage } from "../hooks/message.hook";
-
 import { useEffect, useState } from "react";
-import { event } from "jquery";
 
 export const RegisrationPage = () => {
   const message = useMessage();
@@ -41,38 +39,38 @@ export const RegisrationPage = () => {
   };
 
   return (
-    <header class="login">
-      <div class="row">
-        <div class="col-6 hide"></div>
-        <div class="col-6 full">
-          <div class="reg">
-            <div class="container">
+    <header className="login">
+      <div className="row">
+        <div className="col-6 hide"></div>
+        <div className="col-6 full">
+          <div className="reg">
+            <div className="container">
               <form>
-                <div class="form-group">
-                  <h5 class="card-title">Zarejestruj sie</h5>
+                <div className="form-group">
+                  <h5 className="card-title">Zarejestruj sie</h5>
                   <div>
-                    <div class="form-group">
+                    <div className="form-group">
                       <label htmlFor="email">Email</label>
                       <input
                         placeholder="Wpisz email"
                         id="email"
                         type="text"
                         name="email"
-                        class="form-control"
+                        className="form-control"
                         value={form.email}
                         onChange={changeHandler}
                         onKeyPress={registerPress}
                       />
                     </div>
 
-                    <div class="form-group">
+                    <div className="form-group">
                       <label htmlFor="email">Hasło</label>
                       <input
                         placeholder="Wpisz hasło"
                         id="password"
                         type="password"
                         name="password"
-                        class="form-control"
+                        className="form-control"
                         value={form.password}
                         onChange={changeHandler}
                         onKeyPress={registerPress}
@@ -81,10 +79,14 @@ export const RegisrationPage = () => {
                   </div>
                 </div>
                 <div>
-                  <a class="btn btn-primary" onClick={registerHandler}>
+                  <a
+                    className="btn btn-primary"
+                    href="/"
+                    onClick={registerHandler}
+                  >
                     Zarejestruj sie
                   </a>
-                  <a class="nav-link" href="/">
+                  <a className="nav-link" href="/">
                     Już mam konto
                   </a>
                 </div>

@@ -57,7 +57,7 @@ export const AuthPage = () => {
                         id="email"
                         type="text"
                         name="email"
-                        class="form-control"
+                        className="form-control"
                         value={form.email}
                         onChange={changeHandler}
                         onKeyPress={loginPress}
@@ -70,7 +70,7 @@ export const AuthPage = () => {
                         id="password"
                         type="password"
                         name="password"
-                        class="form-control"
+                        className="form-control"
                         value={form.password}
                         onChange={changeHandler}
                         onKeyPress={loginPress}
@@ -81,15 +81,16 @@ export const AuthPage = () => {
                 <div className="form-group form-check">
                   <input
                     type="checkbox"
-                    class="form-check-input"
+                    className="form-check-input"
                     id="exampleCheck1"
                   />
-                  <label className="form-check-label" for="exampleCheck1">
+                  <label className="form-check-label" htmlFor="exampleCheck1">
                     Check me out
                   </label>
                 </div>
                 <div>
                   <a
+                    href="/"
                     className="btn btn-primary"
                     style={{ marginRight: 10 }}
                     disabled={loading}
@@ -97,7 +98,7 @@ export const AuthPage = () => {
                   >
                     Zaloguj sie
                   </a>
-                  <a clasNames="nav-link" href="/registration">
+                  <a className="nav-link" href="/registration">
                     Nie masz konta? Zarejestruj sie
                   </a>
                 </div>
